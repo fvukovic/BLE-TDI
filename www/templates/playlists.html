@@ -1,0 +1,19 @@
+<ion-view  >
+  <ion-content> <br><br><br><br>
+    <button ng-click="scan()">Scan</button><br><br><br><br>       
+        <div ng-repeat="device in devices" style="border:1px;" >
+          <p>Name: {{device["name"] }}</p><button ng-click="connect(device)">Connect</button><br><br><br>
+        </div>
+        <br><br>
+     <button ng-click="notify()">Notify</button><br><br><br> 
+     <button ng-click="sendInfo()">CHIPINFO_REQ</button><br><br>
+    <button ng-click="send()">GETCHANVALUE_REQ</button><br><br>
+    <button ng-click="send2()">SETCHANVALUE_REQ 1</button><br><br>
+    <button ng-click="sendC2()">SETCHANVALUE_REQ 2</button><br><br>
+    <button ng-click="sendC3()">SETCHANVALUE_REQ 3</button><br><br>
+    <div ng-repeat="note in response">  
+     {{note}}
+
+    </div>
+  </ion-content>
+</ion-view> 
